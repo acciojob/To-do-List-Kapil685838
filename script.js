@@ -1,13 +1,15 @@
-var todo=document.getElementById("newTodoInput");
-var btn= document.getElementById("addTodoBtn");
-var ol=document.getElementById("todoList");
+var todoValue = document.getElementById("newTodoInput");
+var btn = document.getElementById("addTodoBtn");
+var ol = document.getElementById("todoList");
 
-function addTodo(){
-	if(todo.value){
-     var list=document.createElement("li");
-		list.textContent=todo.value;
-	     ol.appendChild(list);
-		todo.value="";
+function addTodo()
+{
+	// alert(todoValue.value);
+	if(todoValue.value){
+		var li  = document.createElement('li');
+		li.textContent = todoValue.value;
+		ol.appendChild(li);
+		todoValue.value = "";
 	}
 }
 btn.addEventListener('click',addTodo);
